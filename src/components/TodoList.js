@@ -1,10 +1,9 @@
-import React, {useState} from "react";
 import Todo from "./Todo";
 
-const TodoList = ({todoItem}) => {
+const TodoList = ({todoItem, setTodoItem}) => {
     return (
         <div>
-            {todoItem.map(item => <Todo item={item} />)}
+            {todoItem.map(todo => <Todo todo={todo} todoItem={todoItem} setTodoItem={setTodoItem} key={todo} />)}
         </div>
     );
 }
